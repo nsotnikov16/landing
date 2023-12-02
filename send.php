@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['send'])) $_SESSION['send'] = 0;
-if ($_SESSION['send'] == 1) return;
+if ($_SESSION['send'] == 5) return;
 $subject = "Вам письмо с сайта";
 
 $name = trim($_POST['name']); 
