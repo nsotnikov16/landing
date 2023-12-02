@@ -24,4 +24,5 @@ $blocks = explode(',', $_GET['blocks']); ?>
             </div>
         </div>
     </div>
+    <script src="./js/script.js"></script>
 </body>
