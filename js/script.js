@@ -2,7 +2,6 @@ class App {
     headerBtn = document.querySelector('.header__btn');
 
     constructor() {
-        this.changeLinks();
         this.setListenerHeaderBtn();
         this.setListenerTest4();
     }
@@ -63,15 +62,6 @@ class App {
 
     clearPage() {
         document.body.innerHTML = '';
-    }
-
-    changeLinks() {
-        const a = document.querySelectorAll('a');
-        a.forEach(el => {
-            const href = el.getAttribute('href');
-            if (href[0] == '#' && document.getElementById(`${href}`)) return;
-            el.setAttribute('href', '/' + href);
-        })
     }
 
     setError(message) {
