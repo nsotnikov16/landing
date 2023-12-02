@@ -84,7 +84,7 @@ class App {
                 id = 234597;
                 break;
         }
-
+        if (!res) return;
         window.open(url + id, '_blank');
     }
 
@@ -115,7 +115,17 @@ class App {
 
     setListenerForm() {
         if (!this.form) return;
-        this.form.addEventListener('submit', (e) => { e.preventDefault(); this.showDataForm(); });
+        this.form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            this.popup.clearContent();
+            this.popup.addContent("Идет отправка формы...");
+            this.popup.open();
+            const res = await this.sendDataForm();
+            this.popup.clearContent();
+            this.showDataForm();
+            if (res.success) this.form.reset();
+            this.popup.addContent(`<h3>${res.text}</h3>`);
+        });
     }
 
     showDataForm() {
@@ -148,6 +158,23 @@ class App {
         this.popup.clearContent();
         this.popup.addContent(html);
         this.popup.open();
+    }
+
+    async sendDataForm() {
+        let result = { success: false };
+        try {
+            const response = await fetch("https://11927488c921.hosting.myjino.ru/send.php", {
+                method: "POST",
+                body: new FormData(this.form)
+            })
+            result = await response.json();
+        } catch (error) {
+
+        }
+
+        !result.success ? result.text = 'Ошибка при отправке формы!' : result.text = 'Форма отправлена успешно. Если письмо не пришло, проверьте папку Спам';
+
+        return result;
     }
 
     setError(message) {
