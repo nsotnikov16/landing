@@ -1,9 +1,58 @@
+class Popup {
+    constructor() {
+        this._popupElement = document.querySelector('.popup');
+        this._closeButton = this._popupElement.querySelector('.popup__close');
+        this._handleEscClose = this._handleEscClose.bind(this)
+        this.setEventListeners()
+    }
+
+    open() {
+        document.body.style.overflow = "hidden";
+        this._popupElement.classList.add('popup_opened')
+        document.addEventListener('keydown', this._handleEscClose);
+    }
+
+    close() {
+        this._popupElement.classList.remove('popup_opened');
+        document.body.style.overflow = "visible";
+        document.removeEventListener('keydown', this._handleEscClose);
+    }
+
+    _handleEscClose(evt) {
+        if (evt.keyCode === 27) {
+            this.close();
+        }
+    }
+
+    _handleOverlayClick(evt) {
+        if (evt.target === evt.currentTarget) {
+            this.close();
+        }
+    }
+
+    clearContent() {
+        this._popupElement.querySelector('.popup__content').innerHTML = '';
+    }
+
+    addContent(content) {
+        this._popupElement.querySelector('.popup__content').insertAdjacentHTML('beforeend', content);
+    }
+
+    setEventListeners() {
+        this._closeButton.addEventListener('click', () => this.close());
+        this._popupElement.addEventListener('click', this._handleOverlayClick.bind(this));
+    }
+}
+
 class App {
     headerBtn = document.querySelector('.header__btn');
+    form = document.getElementById("form");
 
     constructor() {
         this.setListenerHeaderBtn();
+        this.setListenerForm();
         this.setListenerTest4();
+        this.popup = new Popup();
     }
 
     setListenerHeaderBtn() {
@@ -64,9 +113,47 @@ class App {
         document.body.innerHTML = '';
     }
 
+    setListenerForm() {
+        if (!this.form) return;
+        this.form.addEventListener('submit', (e) => { e.preventDefault(); this.showDataForm(); });
+    }
+
+    showDataForm() {
+        if (!this.form.checkValidity()) return;
+        const fields = this.form.querySelectorAll('select, input');
+        let html = `<div class="content">`;
+        fields.forEach(field => {
+            const value = field.value
+            if (!value) return;
+            if (field.type == 'radio' && !field.checked) return;
+            switch (field.name) {
+                case 'name':
+                    html += `<p>Вы ввели имя: ${value}</p>`
+                    break;
+                case 'email':
+                    html += `<p>Вы ввели email: ${value}</p>`
+                    break;
+                case 'city':
+                    html += `<p>Вы выбрали город: ${value}</p>`
+                    break;
+                case 'status':
+                    html += `<p>Вы выбрали статус: ${value}</p>`
+                    break;
+                default:
+                    html += `<p>Значение поля с именем ${field.name}: ${value}</p>`
+                    break;
+            }
+        })
+        html += '</div>';
+        this.popup.clearContent();
+        this.popup.addContent(html);
+        this.popup.open();
+    }
+
     setError(message) {
         throw new Error(message);
     }
 }
+
 
 new App();
