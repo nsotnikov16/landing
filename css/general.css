@@ -55,6 +55,7 @@ body {
     font-size: 18px;
     color: #0B011D;
     cursor: pointer;
+    transition: background-color 0.2s linear;
 }
 
 .btn:hover {
@@ -67,7 +68,6 @@ body {
     border-color: #ff0000;
     font-weight: 700;
     color: white;
-    transition: background-color 0.2s linear;
 }
 
 .btn_red:hover {
