@@ -1,0 +1,113 @@
+.form {}
+
+.form__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+}
+
+.form__row {
+    margin-top: 40px;
+}
+
+.form__label {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.form__input {
+    display: block;
+    background: inherit;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 8px;
+    padding: 8px 0;
+}
+
+.form__input:invalid {
+    border-color: #ff0000;
+}
+
+.form__input:placeholder-shown {
+    border-color: white;
+}
+
+.form__label span {
+    color: #ff0000;
+}
+
+.form__select {
+    width: 65%;
+    outline: none;
+    padding: 5px 16px;
+    font-size: 20px;
+    font-weight: 500;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 16px);
+    background-position-y: 12px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTAnIHZpZXdCb3g9JzAgMCAxNiAxMCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNOC4xMDAwMSA5LjEwMjlMMC4yMTkxODIgMC4wMjU3NjgyTDE1Ljk4MDggMC4wMjU3NjkyTDguMTAwMDEgOS4xMDI5WicgZmlsbD0nIzBCMDExRCcvPjwvc3ZnPgo=");
+}
+
+.form__radio {
+    display: inline-block;
+    margin-right: 24px;
+}
+
+.form__radio:last-child {
+    margin-right: 0;
+}
+
+.form__radio input[type=radio] {
+	display: none;
+}
+.form__radio label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 25px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.form__radio label:before {
+	content: "";
+	display: inline-block;
+	width: 17px;
+	height: 18px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background: white;
+    border-radius: 50%;
+}
+ 
+.form__radio input[type=radio]:checked + label:before {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTgnIGhlaWdodD0nMTknIHZpZXdCb3g9JzAgMCAxOCAxOScgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Y2lyY2xlIGN4PSc5JyBjeT0nOS43MjQyNCcgcj0nOScgZmlsbD0nd2hpdGUnLz48Y2lyY2xlIGN4PSc5JyBjeT0nMTAnIHI9JzYnIGZpbGw9JyMwQjAxMUQnLz48L3N2Zz4K");
+    background-size: 100%;
+}
+ 
+.form__radio label:hover:before {
+	filter: brightness(120%);
+}
+ 
+.form__radio input[type=radio]:disabled + label:before {
+	filter: grayscale(100%);
+}
+
+.form__btn {
+    margin-top: 60px;
+}
+
+.form label[for] {
+    cursor: pointer;
+}
