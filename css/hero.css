@@ -1,0 +1,20 @@
+.hero__container {
+    position: relative;
+}
+
+.hero__title {
+    max-width: 910px;
+}
+
+.hero__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.hero__author {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 62px;
+}

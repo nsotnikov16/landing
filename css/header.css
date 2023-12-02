@@ -1,0 +1,13 @@
+.header {
+    margin: 40px 0 50px;
+}
+
+.header__container, .header__phone-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__phone {
+    margin-right: 34px;
+}

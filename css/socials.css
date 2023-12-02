@@ -1,0 +1,30 @@
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.socials a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    margin-right: 26px;
+}
+
+.socials a:last-child {
+    margin-right: 0;
+}
+
+.whatsapp {
+    background-image: url(../images/whatsapp.svg);
+    background-color: #29a71a;
+    background-size: 25px 25px;
+}
+
+.telegram {
+    background-image: url(../images/telegram.svg);
+    background-size: 22px 18px;
+    background-color: #039be5;
+}

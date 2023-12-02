@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы WEB-технологий</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header__container page__container">
+                <a href="./" class="logo header__logo scale">
+                    <img src="./images/Logo.svg" loading="lazy" alt="Логотип">
+                </a>
+                <nav class="nav header__nav">
+                    <a href="#main" class="nav__link scale">О главном</a>
+                    <a href="#form" class="nav__link scale">Форма</a>
+                    <a href="#contacts" class="nav__link scale">Контакты</a>
+                    <a href="./about-landing.html" class="nav__link scale">Что такое лендинг</a>
+                </nav>
+                <div class="header__phone-btn">
+                    <a href="tel:+78005553535" class="header__phone phone scale">+7 800 555-35-35</a>
+                    <button href="#" class="btn header__btn btn_red">Поставить оценку</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero section">
+                <div class="page__container hero__container">
+                    <h1 class="title hero__title">
+                        <span class="red">Основы WEB-технологий:</span><br>
+                        учебный макет для выполнения лабораторной работы
+                    </h1>
+                    <img src="./images/Hero.svg" class="hero__img" loading="lazy" alt="Hero">
+                    <p class="hero__author">
+                        Выполнил: студент группы 609-21з,<br>Сотников Н.С.
+                    </p>
+                </div>
+            </section>
+            <section class="about section" id="main">
+                <div class="page__container about__container">
+                    <div class="about__left page__left">
+                        <h2 class="title">О главном</h2>
+                        <div class="content">
+                            <p> Web технологии - это набор инструментов и методов, которые используются для создания и
+                                поддержания веб-сайтов и приложений, доступных через интернет. </p>
+                            <p>Они включают в себя языки программирования, фреймворки, инструменты для разработки, базы
+                                данных, серверы и многое другое.</p>
+                        </div>
+                    </div>
+                    <div class="about__right page__right">
+                        <ul class="about__list">
+                            <li>
+                                <img src="./images/html.png" alt="html">
+                                <p>HTML - это язык разметки, который используется для определения структуры и
+                                    содержимого веб-страницы</p>
+                            </li>
+                            <li>
+                                <img src="./images/css.png" alt="css">
+                                <p>CSS - это формальный язык описания внешнего вида страницы; каскадные таблицы стилей
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./images/js.png" alt="js">
+                                <p>JavaScript - это язык программирования, позволяющий добавлять интерактивность на
+                                    веб-страницу</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="page__container footer__container">
+                <a href="./" class="logo footer__logo scale">
+                    <img src="./images/Logo.svg" loading="lazy" alt="Логотип">
+                </a>
+                <nav class="nav footer__nav">
+                    <a href="#main" class="nav__link scale">О главном</a>
+                    <a href="#form" class="nav__link scale">Форма</a>
+                    <a href="#contacts" class="nav__link scale">Контакты</a>
+                    <a href="./about-landing.html" class="nav__link scale">Что такое лендинг</a>
+                </nav>
+                <div class="footer__contacts" id="contacts">
+                    <a href="tel:+78005553535" class="footer__phone phone scale">+7 800 555-35-35</a>
+                    <a href="sotnikov_ns@edu.surgu.ru" class="footer__email scale">sotnikov_ns@edu.surgu.ru</a>
+                    <div class="socials">
+                        <a href="#" class="telegram scale"></a>
+                        <a href="#" class="whatsapp scale"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

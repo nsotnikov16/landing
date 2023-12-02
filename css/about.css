@@ -1,0 +1,37 @@
+.about__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__right {
+    margin-top: 55px;
+}
+
+.about__list {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.about__list li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 21px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgb(11, 1, 29, 20%);
+}
+
+.about__list li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.about__list li img {
+    margin-right: 23px;
+    max-width: 77px;
+}
+
+.about__list li p {
+    font-size: 20px;
+    line-height: 120%;
+}

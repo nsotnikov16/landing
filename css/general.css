@@ -1,0 +1,106 @@
+body {
+    font-family: 'TT Norms';
+    color: #180047;
+
+}
+
+.page__container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.page__left {
+    max-width: 50%;
+    margin-right: 5%;
+}
+
+.page__right {
+    max-width: 45%;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 130%;
+    margin-bottom: 40px;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.scale {
+    transform: scale(1);
+    transition: transform 0.2s ease;
+}
+
+.scale:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    background: white;
+    border: 1px solid #180047;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: #0B011D;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0b011d;
+    color: white;
+}
+
+.btn_red {
+    background: #ff0000;
+    border-color: #ff0000;
+    font-weight: 700;
+    color: white;
+    transition: background-color 0.2s linear;
+}
+
+.btn_red:hover {
+    background-color: white;
+    color: #ff0000;
+}
+
+.phone {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.phone:hover {
+    color: #ff0000;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+.content {
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.content p {
+    margin-bottom: 40px;
+}
+
+* {
+    scroll-behavior: smooth;
+}

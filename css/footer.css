@@ -1,0 +1,33 @@
+.footer {
+    margin: 28px 0;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__contacts > * {
+    margin-bottom: 21px;
+}
+
+.footer__contacts > *:last-child {
+    margin-bottom: 0;
+}
+
+.footer__phone {
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.footer__email {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+}
