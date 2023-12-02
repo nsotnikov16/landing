@@ -11,7 +11,7 @@
 }
 
 .nav__link:hover {
-    color: #ff0000;
+    color: var(--color2);
 }
 
 .nav__link:last-child {

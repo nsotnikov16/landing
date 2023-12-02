@@ -1,5 +1,5 @@
 .check {
-    background: #180047;
+    background: var(--color1);
     color: white;
     padding-bottom: 80px;
 }
